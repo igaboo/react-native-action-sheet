@@ -19,6 +19,7 @@ type Props = ActionSheetOptions & {
   onSelect: (i: number) => boolean;
   startIndex: number;
   length: number;
+  rippleColor?: string;
 };
 
 const BLACK_54PC_TRANSPARENT = '#0000008a';
@@ -66,6 +67,7 @@ export default class ActionGroup extends React.Component<Props> {
     showSeparators: false,
     tintIcons: true,
     textStyle: {},
+    rippleColor: 'rgba(180, 180, 180, 1)',
   };
 
   render() {
@@ -131,10 +133,11 @@ export default class ActionGroup extends React.Component<Props> {
       tintColor,
       autoFocus,
       showSeparators,
+      rippleColor,
     } = this.props;
     const optionViews: React.ReactNode[] = [];
     const nativeFeedbackBackground = TouchableNativeFeedbackSafe.Ripple(
-      'rgba(180, 180, 180, 1)',
+      rippleColor,
       false
     );
 
