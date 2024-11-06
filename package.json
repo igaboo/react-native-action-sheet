@@ -10,7 +10,6 @@
     "lib"
   ],
   "scripts": {
-    "prepare": "bob build",
     "build": "bob build",
     "type-check": "tsc --noEmit",
     "lint": "eslint . --fix",
