@@ -137,7 +137,7 @@ export default class ActionGroup extends React.Component<Props> {
     } = this.props;
     const optionViews: React.ReactNode[] = [];
     const nativeFeedbackBackground = TouchableNativeFeedbackSafe.Ripple(
-      rippleColor,
+      rippleColor || 'rgba(180, 180, 180, 1)',
       false
     );
 
