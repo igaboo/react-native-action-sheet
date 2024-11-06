@@ -140,6 +140,7 @@ export default class CustomActionSheet extends React.Component<Props, State> {
       separatorStyle,
       cancelButtonIndex,
       cancelButtonTintColor,
+      rippleColor,
     } = options;
     return (
       <TouchableWithoutFeedback importantForAccessibility="yes" onPress={this._selectCancelButton}>
@@ -182,6 +183,7 @@ export default class CustomActionSheet extends React.Component<Props, State> {
               showSeparators={showSeparators}
               containerStyle={containerStyle}
               separatorStyle={separatorStyle}
+              rippleColor={rippleColor}
             />
           </View>
         </Animated.View>
